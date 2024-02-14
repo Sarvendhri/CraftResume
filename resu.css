@@ -1,0 +1,20 @@
+
+label[id="img"]
+{
+    display: block;
+    color: white;
+    width: 200px;
+    background: #0977c0;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.myimg{
+    border-radius: 50%;
+    width: 200px;
+}
+.background{
+    background-color: rgb(182, 107, 253);
+}

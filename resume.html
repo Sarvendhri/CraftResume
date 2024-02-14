@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Rocket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="resu.css" />
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Rocket</h1>
+        <p class="text-center">Craft your career story</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="hero mt-2">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg" width="150" height="150">
+                    <label for="'file" id="img">upload image</label>
+                    <input type="file" id="image" accept="image/jpeg, image/jpg, image/png" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="nameField">Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter here" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField">Phone Number</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" placeholder="Enter here" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Enter here" class="form-control" />
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField">Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="LinkedField">LinkedIn</label>
+                    <input type="text" id="LinkedField" placeholder="Enter here" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="obj" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea placeholder="Enter here" class="form-control weField" rows="2"></textarea>
+                    <div class="container text-center mt-2 " id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualifications</label>
+                    <textarea placeholder="Enter here" class="form-control eqField"></textarea>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="sk">
+                    <label for="">Skills</label>
+                    <textarea placeholder="Enter here" class="form-control skField"></textarea>
+                    <div class="container text-center mt-2" id="skAddButton">
+                        <button onclick="addNewSKField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="l">
+                    <label for="">Languages</label>
+                    <input type="language" placeholder="Enter here" class="form-control" />
+                    <div class="container text-center mt-2" id="lAddButton">
+                        <button onclick="addNewLField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-2">
+            <button onclick="GenerateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
+
+        </div>
+    </div>
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <img src="https://img.freepik.com/premium-photo/purple-purple-image-man-with-white-shirt-front_745528-2351.jpg" alt=""
+                class="img-fluid myimg" id="imgT" />
+                <div class="container mt-2">
+                    <p id="nameT">Aman Kumar Tiwari</p>
+                    <p id="emailT">AmanTiwari@gmail.com</p>
+                    <p id="contactT">+914539492341</p>
+                    <p id="addressT">76892/24563 Sector 30 Noida, India</p>
+    
+                    <hr />
+                    <p>
+                        <a id="linkT" href="#1">https://www.LinkedIn.com/AmanTiwari</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <h1 id="nT" class="text-center" style="font-weight: 900 font-height=200" >Aman Kumar Tiwari</h1>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objT">To transition my proven problem-solving, analytical, and communication skills from an engineering background to a sales role, exceeding targets and building strong relationships with clients.</p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>
+                                Freelance Web Developer
+                            </li>
+                            <li>
+                                Software Development Intern at Google
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h3>Academic Qualifications</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>
+                                VidyaBhavan High School, 2000-2015
+                            </li>
+                            <li>
+                                Intermediate Junior College, 2016-2018
+                            </li>
+                            <li>
+                                Osmania University, 2018-2022
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skT">
+                            <li>
+                                java programming 
+                            </li>
+                            <li>
+                                Web Development
+                            </li>
+                            <li>
+                                Communication  
+                            </li>
+                            <li>
+                                Adaptability
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="Printresume()" class="btn background">Print Resume</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="res.js"></script>
+  </body>
+</html>
